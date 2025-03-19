@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #000;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 100px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.material-symbols-outlined {
+  color: #fff;
+  font-size: 30px !important;
+}
+.sidebar li {
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+}
+.sidebar li:hover {
+  transform: scale(1.2);
+}
+.content-wrapper { 
+  flex: 1;
+  margin-left: 100px;
+}
+.banner {
+  background: url("./NetflixAssets/moneyHeist.png") no-repeat;
+  background-size: contain;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 20px;
+  padding: px 20px 5px;
+}
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.spacing-left {
+  margin-left: 15px;
+}
+.rating-label {
+  background-color: #e6ba00;
+  color: #000;
+  border-radius: 2px;
+  padding: 0px 5px;
+  /* font-family:"Anton"; */
+}
+.text-white {
+  color: #fff;
+}
+.bold-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+.stream-count {
+  color: #d40000;
+}
+.action-buttons {
+  display: flex;
+  gap: 20px;
+}
+.btn {
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+.btn-play {
+  background-color: #d40000;
+  padding: 12px 50px;
+  color: #fff;
+}
+.btn-play:hover {
+  background-color: #a00000;
+}
+.btn-trailer {
+  background-color: #fff;
+  padding: 12px 15px;
+  color: #000;
+}
+.btn-trailer:hover {
+  background-color: #b0b0b0;
+}
+.movie-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+}
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.movie {
+  width: 140px;
+  aspect-ratio: 2/3;
+  border-radius: 5px;
+}
+#netflix{
+  display: none;
+  height: 50px;
+  width: 55px;
+}
+/* Responsive Design */
+
+@media (max-width: 767px) {
+  .banner {
+    display: none;
+  }
+  .sidebar ul {
+    margin-top: 30px;
+    justify-content: start;
+  }
+  .sidebar{
+    width: 50px;
+    padding: 10px;
+  }
+  .movie-container {
+    width: 100vw;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .movie-section{
+    overflow-x: scroll;
+  }
+  .content-wrapper {
+    flex: 1;
+    margin-left: 50px;
+  }
+  #netflix{
+    display: block;
+  }
+}
